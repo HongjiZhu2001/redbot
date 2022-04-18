@@ -23,6 +23,27 @@ msgstr ""
 msgid "NM$L"
 msgstr ""
 
+#: insult.py:11
+msgid "废物"
+msgstr ""
+
+#: insult.py:11
+msgid "饭桶"
+msgstr ""
+#: insult.py:11
+msgid "弱智"
+msgstr ""
+
+#: insult.py:11
+msgid "弟中之弟"
+msgstr ""
+#: insult.py:11
+msgid "海尔兄弟"
+msgstr ""
+
+#: insult.py:11
+msgid "舒克和贝塔"
+msgstr ""
 
 #: insult.py:206
 #, docstring
