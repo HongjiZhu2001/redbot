@@ -9,7 +9,7 @@ _ = Translator("Insult", __file__)
 
 insults: List[str] = [
     _("我是你爹"),
-    _("NM$L")
+    _("NM$L"),
 ]
 
 
