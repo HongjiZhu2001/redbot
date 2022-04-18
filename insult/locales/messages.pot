@@ -16,7 +16,11 @@ msgstr ""
 
 
 #: insult.py:10
-msgid "我是你爹."
+msgid "我是你爹"
+msgstr ""
+
+#: insult.py:11
+msgid "NM$L"
 msgstr ""
 
 
