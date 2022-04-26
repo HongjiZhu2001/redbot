@@ -45,7 +45,7 @@ class DingZhen(BaseCog):
         self.version = __version__
         self.author = __author__
 
-    @commands.command()
+    @commands.command(name="来点丁真", hidden=True)
     @commands.cooldown(6, 60, commands.BucketType.user)
     async def dz(self, ctx, *, user: discord.Member=None):
         """Pat users."""
@@ -60,7 +60,7 @@ class DingZhen(BaseCog):
             dz.set_image(url=rnd(self.gifs))
             await ctx.send(embed=dz)
 
-    @commands.command(name="pdaver", hidden=True)
+    @commands.command(name="dingZhenver", hidden=True)
     async def _pda_version(self, ctx):
         """Show PDA version"""
         ver = self.version
