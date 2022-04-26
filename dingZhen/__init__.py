@@ -1,5 +1,5 @@
-from .pda import PDA
+from .dingZhen import DingZhen
 
 
 def setup(bot):
-    bot.add_cog(PDA(bot))
+    bot.add_cog(DingZhen(bot))
