@@ -80,7 +80,6 @@ class DingZhen(BaseCog):
         self.author = __author__
 
     @commands.command(name="来点丁真", hidden=True)
-    @commands.cooldown(6, 60, commands.BucketType.user)
     async def dz(self, ctx, *,user: discord.Member=None):
         """Pat users."""
         author = ctx.author
