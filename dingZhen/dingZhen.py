@@ -17,7 +17,43 @@ __author__ = "Yukirin"
 gifs = [
     "https://i.imgur.com/TZjlBlw.jpg",
     "https://i.imgur.com/mcsQg4I.jpg",
-    "https://i.imgur.com/UkSYd6R.jpg"
+    "https://i.imgur.com/UkSYd6R.jpg",
+    "https://i.imgur.com/pd3tgDO.jpg",
+    "https://i.imgur.com/lGwFNev.jpg",
+    "https://i.imgur.com/Bq2tRJh.jpg",
+    "https://i.imgur.com/L6aoZOh.jpg",
+    "https://i.imgur.com/grhsNBm.jpg",
+    "https://i.imgur.com/4s8ozAp.jpg",
+    "https://i.imgur.com/GahBA2q.jpg",
+    "https://i.imgur.com/RzaqEes.jpg",
+    "https://i.imgur.com/UvGtSJv.jpg",
+    "https://i.imgur.com/KafNEK1.jpg",
+    "https://i.imgur.com/PYNOjF9.jpg",
+    "https://i.imgur.com/6kRR5FS.jpg",
+    "https://i.imgur.com/vJXtazp.jpg",
+    "https://i.imgur.com/q4L8PCS.jpg",
+    "https://i.imgur.com/GB6mTMt.jpg",
+    "https://i.imgur.com/0eK2r2j.jpg",
+    "https://i.imgur.com/l1hhmEQ.jpg",
+    "https://i.imgur.com/w04Styw.jpg",
+    "https://i.imgur.com/mCYq654.jpg",
+    "https://i.imgur.com/MvPYDYe.jpg",
+    "https://i.imgur.com/bDAdrUW.jpg",
+    "https://i.imgur.com/VTXVKbL.jpg",
+    "https://i.imgur.com/xhkGRys.jpg",
+    "https://i.imgur.com/lYyzwAN.jpg",
+    "https://i.imgur.com/NQKMrdp.jpg",
+    "https://i.imgur.com/rwj8S5G.jpg",
+    "https://i.imgur.com/M8NAq7g.jpg",
+    "https://i.imgur.com/EsZcTD9.jpg",
+    "https://i.imgur.com/sbjlyfc.jpg",
+    "https://i.imgur.com/mNRMD2u.jpg",
+    "https://i.imgur.com/oWtW4qQ.jpg",
+    "https://i.imgur.com/Q5ubvy6.jpg",
+    "https://i.imgur.com/jGvRPRg.jpg",
+    "https://i.imgur.com/99gelhU.jpg",
+    "https://i.imgur.com/AywQYmB.jpg",
+    "https://i.imgur.com/8Q9CNpX.jpg"
 ]
 
 failmsgs = [
@@ -50,13 +86,13 @@ class DingZhen(BaseCog):
         author = ctx.author
         if not user:
             message = rnd(patmsgs)
-            dz = discord.Embed(description=message, color=discord.Color(1e2124))
+            dz = discord.Embed(description=message, color=discord.Color(0x206694))
             dz.set_image(url=rnd(self.gifs))
             await ctx.send(embed=dz)
 
         else:
             message = rnd(patmsgs)
-            dz = discord.Embed(description=message, color=discord.Color(1e2124))
+            dz = discord.Embed(description=message, color=discord.Color(0x206694))
             dz.set_image(url=rnd(self.gifs))
             await ctx.send(embed=dz)
 
