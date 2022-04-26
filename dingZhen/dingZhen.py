@@ -36,7 +36,7 @@ patmsgs = [
 ]
 
 
-class PDA(BaseCog):
+class DingZhen(BaseCog):
     """Public Display of Affection ~!"""
 
     def __init__(self, bot):
@@ -47,7 +47,7 @@ class PDA(BaseCog):
 
     @commands.command()
     @commands.cooldown(6, 60, commands.BucketType.user)
-    async def pat(self, ctx, *, user: discord.Member=None):
+    async def dz(self, ctx, *, user: discord.Member=None):
         """Pat users."""
         author = ctx.author
 
@@ -56,9 +56,9 @@ class PDA(BaseCog):
             await ctx.send(message.format(author=author.name))
         else:
             message = rnd(patmsgs)
-            pat = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
-            pat.set_image(url=rnd(self.gifs))
-            await ctx.send(embed=pat)
+            dz = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
+            dz.set_image(url=rnd(self.gifs))
+            await ctx.send(embed=dz)
 
     @commands.command(name="pdaver", hidden=True)
     async def _pda_version(self, ctx):
