@@ -34,7 +34,7 @@ patmsgs = [
 ]
 
 
-class PDA(BaseCog):
+class DingZhen(BaseCog):
     """Public Display of Affection ~!"""
 
     def __init__(self, bot):
@@ -50,9 +50,9 @@ class PDA(BaseCog):
         author = ctx.author
 
             message = rnd(patmsgs)
-            pat = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
-            pat.set_image(url=rnd(self.gifs))
-            await ctx.send(embed=pat)
+            dingZhen = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
+            dingZhen.set_image(url=rnd(self.gifs))
+            await ctx.send(embed=dingZhen)
 
     @commands.command(name="pdaver", hidden=True)
     async def _dingZhen_version(self, ctx):
