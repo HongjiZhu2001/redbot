@@ -50,15 +50,10 @@ class DingZhen(BaseCog):
     async def dz(self, ctx, *, user: discord.Member=None):
         """Pat users."""
         author = ctx.author
-
-        if not user:
-            message = rnd(self.failmsgs)
-            await ctx.send(message.format(author=author.name))
-        else:
-            message = rnd(patmsgs)
-            dz = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
-            dz.set_image(url=rnd(self.gifs))
-            await ctx.send(embed=dz)
+        message = rnd(patmsgs)
+        dz = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
+        dz.set_image(url=rnd(self.gifs))
+        await ctx.send(url=rnd(self.gifs))
 
     @commands.command(name="dingZhenver", hidden=True)
     async def _pda_version(self, ctx):
