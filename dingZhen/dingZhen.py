@@ -45,7 +45,7 @@ class DingZhen(BaseCog):
 
     @commands.command(name="来点丁真", hidden=True)
     @commands.cooldown(6, 60, commands.BucketType.user)
-    async def dz(self, ctx, *):
+    async def dz(self, ctx, *,user: discord.Member=None):
         """Pat users."""
         author = ctx.author
         if not user:
