@@ -50,13 +50,13 @@ class DingZhen(BaseCog):
         author = ctx.author
         if not user:
             message = rnd(patmsgs)
-            dz = discord.Embed(description=message, color=discord.Color(0xffb6c1))
+            dz = discord.Embed(description=message, color=discord.Color(1e2124))
             dz.set_image(url=rnd(self.gifs))
             await ctx.send(embed=dz)
 
         else:
             message = rnd(patmsgs)
-            dz = discord.Embed(description=message, color=discord.Color(0xffb6c1))
+            dz = discord.Embed(description=message, color=discord.Color(1e2124))
             dz.set_image(url=rnd(self.gifs))
             await ctx.send(embed=dz)
 
