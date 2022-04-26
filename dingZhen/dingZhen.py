@@ -30,9 +30,7 @@ failmsgs = [
 ]
 
 patmsgs = [
-    "**{user}** got a pat from **{author}**",
-    "**{author}** affectionately pat **{user}**",
-    "Without hesitation, **{author}** pats **{user}** with love"
+    ""
 ]
 
 
@@ -53,7 +51,7 @@ class DingZhen(BaseCog):
         message = rnd(patmsgs)
         dz = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
         dz.set_image(url=rnd(self.gifs))
-        await ctx.send(url=rnd(self.gifs))
+        await ctx.send(embed=dz)
 
     @commands.command(name="dingZhenver", hidden=True)
     async def _pda_version(self, ctx):
