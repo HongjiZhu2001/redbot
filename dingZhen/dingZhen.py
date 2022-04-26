@@ -45,18 +45,18 @@ class DingZhen(BaseCog):
 
     @commands.command(name="来点丁真", hidden=True)
     @commands.cooldown(6, 60, commands.BucketType.user)
-    async def dz(self, ctx, *, user: discord.Member=None):
+    async def dz(self, ctx, *):
         """Pat users."""
         author = ctx.author
         if not user:
             message = rnd(patmsgs)
-            dz = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
+            dz = discord.Embed(description=message, color=discord.Color(0xffb6c1))
             dz.set_image(url=rnd(self.gifs))
             await ctx.send(embed=dz)
 
         else:
             message = rnd(patmsgs)
-            dz = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
+            dz = discord.Embed(description=message, color=discord.Color(0xffb6c1))
             dz.set_image(url=rnd(self.gifs))
             await ctx.send(embed=dz)
 
