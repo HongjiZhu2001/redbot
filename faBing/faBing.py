@@ -36,22 +36,51 @@ gifs = [
 ]
 
 failmsgs = [
-    "{author} is trying to pat non-existent entity ... and failed.",
-    "{author}: *pats non-existent entity*. This bad boy can accept so many pats.",
-    "To be honest, I don't know what's {author} been smoking, but sorry, you can't pat non-existent entity",
-    "Oh come on, is it that hard to correctly use this command?",
-    "You must pat valid and existing user. Try using @ mention, username or nickname.",
-    "(╯°□°）╯︵ ┻━┻"
+    "你得找个人发病"
 ]
 
 patmsgs = [
-    "**{user}** got a pat from **{author}**",
-    "**{author}** affectionately pat **{user}**",
-    "Without hesitation, **{author}** pats **{user}** with love"
+    """
+**{user}**想要一件漂亮的衣服
+和yhm一样靓丽的裙子
+鼠鼠们犯了难
+要是有天国的锦缎该多好啊
+以金银色的光线编织
+还有湛蓝的夜色与洁白的昼光
+以及黎明和黄昏错综的光芒
+要是然然得了这锦缎
+她该有多开心啊
+但是啊，鼠鼠们，如此贫穷，除了梦一无所有
+于是鼠鼠们每个人拿出自己的梦
+凑了一件可爱的衣裳
+**{user}**穿着很合身
+有了这件衣服，然然终于得了猫猫的喜爱
+越来越多的猫猫依偎在然然的怀里
+鼠鼠们再不敢靠近嘉然小姐了
+只敢偷偷地从洞里探出脑袋
+望着她，望着她
+偶有发了病的鼠鼠冲出来
+转瞬便葬身猫口
+终于有一天
+**{user}**得了天国的锦缎
+身边的猫猫也嫌弃鼠鼠的衣服太过寒碜
+**{user}**穿上新衣服
+华丽动人，连yhm都要心生嫉妒
+是时候丢掉旧衣服了
+**{user}**回想起
+她与鼠鼠一起度过的时光
+她陪伴鼠鼠唱过的歌曲
+她为鼠鼠哭泣过的夜
+又于心不忍了
+于是她整齐地把衣服垫在枕头下
+与此同时
+阴暗的洞里，一只鼠鼠悄声说道
+“轻一点啊，因为你枕着我的梦”
+"""
 ]
 
 
-class PDA(BaseCog):
+class FaBing(BaseCog):
     """Public Display of Affection ~!"""
 
     def __init__(self, bot):
@@ -60,8 +89,7 @@ class PDA(BaseCog):
         self.version = __version__
         self.author = __author__
 
-    @commands.command()
-    @commands.cooldown(6, 60, commands.BucketType.user)
+    @commands.command(name="发病", hidden=True)
     async def pat(self, ctx, *, user: discord.Member=None):
         """Pat users."""
         author = ctx.author
@@ -71,9 +99,8 @@ class PDA(BaseCog):
             await ctx.send(message.format(author=author.name))
         else:
             message = rnd(patmsgs)
-            pat = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
-            pat.set_image(url=rnd(self.gifs))
-            await ctx.send(embed=pat)
+            fb = discord.Embed(description=message.format(user=user.name, author=author.name), color=discord.Color(0xffb6c1))
+            await ctx.send(embed=fb)
 
     @commands.command(name="pdaver", hidden=True)
     async def _pda_version(self, ctx):
