@@ -53,7 +53,16 @@ gifs = [
     "https://i.imgur.com/jGvRPRg.jpg",
     "https://i.imgur.com/99gelhU.jpg",
     "https://i.imgur.com/AywQYmB.jpg",
-    "https://i.imgur.com/8Q9CNpX.jpg"
+    "https://i.imgur.com/8Q9CNpX.jpg",
+    "https://i.imgur.com/9Cg7QIz.jpg",
+    "https://i.imgur.com/RSj2lqI.jpg",
+    "https://i.imgur.com/uQeGSsB.jpg",
+    "https://i.imgur.com/Au5QFUe.jpg",
+    "https://i.imgur.com/evtQepL.jpg",
+    "https://i.imgur.com/cu5CHyW.jpg",
+    "https://i.imgur.com/TVS85lq.png",
+    "https://i.imgur.com/1rmG2WN.jpg",
+    "https://i.imgur.com/9NK0y7u.jpg"
 ]
 
 failmsgs = [
