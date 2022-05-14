@@ -2,9 +2,6 @@
 
 # Discord
 import discord
-from discord import Client
-
-bot = Client()
 
 # Red
 from redbot.core import Config, commands
@@ -92,10 +89,11 @@ class DingZhen(BaseCog):
         self.version = __version__
         self.author = __author__
         
-    @bot.event
-    async def on_message(message):
+    @commands.Cog.listener()
+    async def on_message(self, message):
+        channel = message.channel
         if keyword in message.content:
-            await bot.send_message(message.channel, set_image(url=rnd(self.gifs)))
+            await channel.send(set_image(url=rnd(self.gifs)))
             
  """           
     @commands.command(name="来点丁真", hidden=True)
