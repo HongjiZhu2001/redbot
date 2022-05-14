@@ -4,7 +4,7 @@
 import discord
 
 # Red
-from redbot.core import commands
+from redbot.core import Config, commands
 
 # Libs 
 from random import choice as rnd
