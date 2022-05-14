@@ -91,13 +91,13 @@ class DingZhen(BaseCog):
     keyword = ["来点丁真","来点丁真"]
     
     @commands.Cog.listener()
-    async def on_message(self, ctx, message):
+    async def on_message(self, message):
         message_text = message.content.strip().upper()
         if keyword in message_text:
             message = rnd(patmsgs)
             dz = discord.Embed(description=message, color=discord.Color(0x206694))
             dz.set_image(url=rnd(self.gifs))
-            await ctx.send(embed=dz)
+            await bot.send(embed=dz)
             
    # @commands.command(name="来点丁真", hidden=True)
  #   async def dz(self, ctx, *,user: discord.Member=None):
