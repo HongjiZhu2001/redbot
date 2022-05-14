@@ -90,10 +90,14 @@ class DingZhen(BaseCog):
         
     @commands.Cog.listener()
     async def on_message(self, message):
-        messagee = rnd(patmsgs)
+        keyword = "RESPOND"
+        if keyword in message:
+            messagee = rnd(patmsgs)
             dz = discord.Embed(description=messagee, color=discord.Color(0x206694))
             dz.set_image(url=rnd(self.gifs))
             await message.send(embed=dz)
+        else:
+            return
  """           
     @commands.command(name="来点丁真", hidden=True)
     async def dz(self, ctx, *,user: discord.Member=None):
