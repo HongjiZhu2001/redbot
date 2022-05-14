@@ -94,7 +94,7 @@ class DingZhen(BaseCog):
         if keyword in ctx.content:
             await ctx.send("123")
 """                     
-    @commands.command(aliases=["来点丁真", "丁真"])
+    @commands.command(name=["来点丁真", "丁真"])
     async def dz(self, ctx, *,user: discord.Member=None):
         """Pat users."""
         author = ctx.author
