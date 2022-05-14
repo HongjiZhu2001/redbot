@@ -89,7 +89,7 @@ class DingZhen(BaseCog):
         self.version = __version__
         self.author = __author__
         
- """      
+"""      
     @commands.Cog.listener()
     async def on_message(self, ctx):
         if keyword in ctx.content:
