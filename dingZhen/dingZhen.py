@@ -93,8 +93,7 @@ class DingZhen(BaseCog):
     async def on_message(self, ctx):
         if keyword in ctx.content:
             await ctx.send("123")
-            
- """           
+                     
     @commands.command(name="来点丁真", hidden=True)
     async def dz(self, ctx, *,user: discord.Member=None):
         """Pat users."""
@@ -110,7 +109,7 @@ class DingZhen(BaseCog):
             dz = discord.Embed(description=message, color=discord.Color(0x206694))
             dz.set_image(url=rnd(self.gifs))
             await ctx.send(embed=dz)
-"""
+
     @commands.command(name="dingZhenver", hidden=True)
     async def _pda_version(self, ctx):
         """Show PDA version"""
