@@ -90,10 +90,9 @@ class DingZhen(BaseCog):
         self.author = __author__
         
     @commands.Cog.listener()
-    async def on_message(self, message):
-        channel = message.channel
-        if keyword in message.content:
-            await channel.send(set_image(url=rnd(self.gifs)))
+    async def on_message(self, ctx):
+        if keyword in ctx.content:
+            await ctx.send("123")
             
  """           
     @commands.command(name="来点丁真", hidden=True)
