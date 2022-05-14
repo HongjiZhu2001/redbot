@@ -2,6 +2,9 @@
 
 # Discord
 import discord
+from discord import Client
+
+bot = Client()
 
 # Red
 from redbot.core import Config, commands
@@ -78,6 +81,7 @@ patmsgs = [
     ""
 ]
 
+keyword = "RESPOND"
 
 class DingZhen(BaseCog):
     """Public Display of Affection ~!"""
@@ -88,13 +92,11 @@ class DingZhen(BaseCog):
         self.version = __version__
         self.author = __author__
         
-    @commands.Cog.listener()
-    async def on_message(self, message):
-        keyword = "RESPOND"
+    @bot.event
+    async def on_message(message):
         if keyword in message.content:
-            await message.channel.send(set_image(url=rnd(self.gifs)))
-        else:
-            return
+            await bot.send_message(message.channel, set_image(url=rnd(self.gifs)))
+            
  """           
     @commands.command(name="来点丁真", hidden=True)
     async def dz(self, ctx, *,user: discord.Member=None):
