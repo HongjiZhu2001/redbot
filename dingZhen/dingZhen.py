@@ -87,33 +87,22 @@ class DingZhen(BaseCog):
         self.failmsgs = failmsgs
         self.version = __version__
         self.author = __author__
-        
-    keyword = ["来点丁真","来点丁真"]
-    bot = commands.Bot(command_prefix=commands.when_mentioned)
-    @bot.event()
-    async def on_message(self, message):
-        message_text = message.content.strip().upper()
-        if keyword in message_text:
+            
+    @commands.command(name="来点丁真", hidden=True)
+    async def dz(self, ctx, *,user: discord.Member=None):
+        """Pat users."""
+        author = ctx.author
+        if not user:
             message = rnd(patmsgs)
             dz = discord.Embed(description=message, color=discord.Color(0x206694))
             dz.set_image(url=rnd(self.gifs))
-            await bot.send(embed=dz)
-            
-   # @commands.command(name="来点丁真", hidden=True)
- #   async def dz(self, ctx, *,user: discord.Member=None):
-   #     """Pat users."""
-   #     author = ctx.author
-   #     if not user:
-    #        message = rnd(patmsgs)
-    #        dz = discord.Embed(description=message, color=discord.Color(0x206694))
-   #         dz.set_image(url=rnd(self.gifs))
-   #         await ctx.send(embed=dz)
-#
-   #     else:
-   #         message = rnd(patmsgs)
-   #         dz = discord.Embed(description=message, color=discord.Color(0x206694))
-   #         dz.set_image(url=rnd(self.gifs))
-    #        await ctx.send(embed=dz)
+            await ctx.send(embed=dz)
+
+        else:
+            message = rnd(patmsgs)
+            dz = discord.Embed(description=message, color=discord.Color(0x206694))
+            dz.set_image(url=rnd(self.gifs))
+            await ctx.send(embed=dz)
 
     @commands.command(name="dingZhenver", hidden=True)
     async def _pda_version(self, ctx):
