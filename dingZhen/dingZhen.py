@@ -95,7 +95,7 @@ class DingZhen(BaseCog):
             messagee = rnd(patmsgs)
             dz = discord.Embed(description=messagee, color=discord.Color(0x206694))
             dz.set_image(url=rnd(self.gifs))
-            await message.send(embed=dz)
+            await message.channel.send(embed=dz)
         else:
             return
  """           
