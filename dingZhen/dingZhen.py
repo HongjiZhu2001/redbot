@@ -89,8 +89,8 @@ class DingZhen(BaseCog):
         self.author = __author__
         
     keyword = ["来点丁真","来点丁真"]
-    
-    @commands.Cog.listener()
+    bot = commands.Bot(command_prefix=commands.when_mentioned)
+    @bot.event()
     async def on_message(self, message):
         message_text = message.content.strip().upper()
         if keyword in message_text:
