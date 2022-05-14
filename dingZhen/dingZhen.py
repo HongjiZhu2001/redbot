@@ -88,7 +88,7 @@ class DingZhen(BaseCog):
         self.version = __version__
         self.author = __author__
 
-    @commands.command(name="来点丁真", hidden=True)
+    @commands.event(name="来点丁真", hidden=True)
     async def dz(self, ctx, *,user: discord.Member=None):
         """Pat users."""
         author = ctx.author
