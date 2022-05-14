@@ -87,10 +87,8 @@ class DingZhen(BaseCog):
         self.failmsgs = failmsgs
         self.version = __version__
         self.author = __author__
- 
-    bot = commands.Bot(command_prefix=commands.when_mentioned)
     
-    @bot.event(name="来点丁真", hidden=True)
+    @commands.when_mentioned(name="来点丁真", hidden=True)
     async def dz(self, ctx, *,user: discord.Member=None):
         """Pat users."""
         author = ctx.author
