@@ -92,10 +92,7 @@ class DingZhen(BaseCog):
     async def on_message(self, message):
         keyword = "RESPOND"
         if keyword in message.content:
-            messagee = rnd(patmsgs)
-            dz = discord.Embed(description=messagee, color=discord.Color(0x206694))
-            dz.set_image(url=rnd(self.gifs))
-            await message.channel.send(embed=dz)
+            await message.channel.send(set_image(url=rnd(self.gifs)))
         else:
             return
  """           
