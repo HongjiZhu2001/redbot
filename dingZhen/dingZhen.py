@@ -311,7 +311,7 @@ gifs = [
     "https://i.imgur.com/9NK0y7u.jpg",
     "https://i.imgur.com/1rmG2WN.jpg",
     "https://i.imgur.com/cu5CHyW.jpg",
-    "https://i.imgur.com/TVS85lq.png",
+    #"https://i.imgur.com/TVS85lq.png",
     "https://i.imgur.com/evtQepL.jpg"    
 ]
 
